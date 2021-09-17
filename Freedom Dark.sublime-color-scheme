@@ -1,0 +1,178 @@
+{
+	"name":   "Freedom Dark",
+	"author": "frithrah",
+
+	"variables":
+	{
+		// Colours
+		"bgrey50":   "#eceff1",
+		"bgrey100":  "#cfd8dc",
+		"bgrey200":  "#b0bec5",
+		"bgrey300":  "#90a4ae",
+		"bgrey400":  "#78909c",
+		"bgrey500":  "#607d8b",
+		"bgrey600":  "#546e7a",
+		"bgrey700":  "#455a64",
+		"bgrey800":  "#37474f",
+		"bgrey900":  "#263238",
+
+		"red600":    "#e53935",
+		"red900":    "#b71c1c",
+		"green300":  "#81c784",
+		"green900":  "#1b5e20",
+		"blue100":   "#bbdefb",
+		"blue400":   "#42a5f5",
+		"blue700":   "#1976d2",
+		"blue900":   "#0d47a1",
+		"yellow800": "#f9a825",
+		"yellow900": "#f57f17",
+
+		// Styles
+		"bg":           "var(bgrey900)",
+		"fg":           "var(bgrey50)",
+		"soft_bg":      "var(bgrey700)",
+		"soft_fg":      "var(bgrey200)",
+		"softer_bg":    "var(bgrey800)",
+		"softer_fg":    "var(bgrey300)",
+		"select_bg":    "var(blue700)",
+		"select_fg":    "var(fg)",
+		"highlight_bg": "var(yellow800)",
+		"highlight_fg": "var(bg)",
+		"highlight_or": "var(yellow900)",
+		"comment":      "var(green300)",
+		"constant":     "var(blue100)",
+		"constant_alt": "var(blue400)",
+		"alert":        "var(yellow800)",
+		"added":        "var(green900)",
+		"modified":     "var(blue900)",
+		"deleted":      "var(red900)"
+	},
+
+	"globals":
+	{
+		"background":                    "var(bg)",
+		"foreground":                    "var(fg)",
+
+		"caret":                         "var(select_bg)",
+		"block_caret":                   "var(select_bg)",
+
+		"line_highlight":                "var(softer_bg)",
+		"rulers":                        "var(soft_bg)",
+		"invisibles":                    "var(soft_bg)",
+		"misspelling":                   "var(alert)",
+
+		"selection_border_width":        "0",
+		"selection_corner_radius":       "2",
+		"selection":                     "var(select_bg)",
+		"selection_foreground":          "var(select_fg)",
+		"inactive_selection":            "var(soft_bg)",
+		"inactive_selection_foreground": "var(fg)",
+
+		"highlight":                     "var(highlight_bg)",
+		"find_highlight":                "var(highlight_bg)",
+		"find_highlight_foreground":     "var(highlight_fg)",
+
+		"brackets_options":              "underline",
+		"brackets_foreground":           "var(fg)",
+		"bracket_contents_options":      "underline",
+		"bracket_contents_foreground":   "var(fg)",
+		"tags_options":                  "underline",
+		"tags_foreground":               "var(fg)",
+
+		"line_diff_width":               "4",
+		"line_diff_added":               "var(added)",
+		"line_diff_modified":            "var(modified)",
+		"line_diff_deleted":             "var(deleted)"
+	},
+
+	"rules":
+	[
+		// Code
+		{
+			"name":       "Comment",
+			"scope":      "comment, punctuation.definition.comment",
+			"foreground": "var(comment)"
+		},
+
+		{
+			"name":       "String",
+			"scope":      "string",
+			"foreground": "var(constant)"
+		},
+
+		{
+			"name":       "Escapes",
+			"scope":      "constant.character.escape, constant.other.placeholder",
+			"foreground": "var(constant_alt)"
+		},
+
+		{
+			"name":       "Constants",
+			"scope":      "constant",
+			"foreground": "var(constant)"
+		},
+
+		{
+			"name":       "Mistakes",
+			"scope":      "invalid",
+			"foreground": "var(alert)"
+		},
+
+		// Exclusions
+		{
+			"name":       "JSON",
+			"scope":      "string.quoted.double.json",
+			"foreground": "var(fg)"
+		},
+
+		// Markup
+		{
+			"name":       "Tags",
+			"scope":      "entity.name.tag, punctuation.definition.tag",
+			"foreground": "var(softer_fg)"
+		},
+
+		{
+			"name":       "Headings",
+			"scope":      "markup.heading",
+			"font_style": "bold"
+		},
+
+		{
+			"name":       "Italic",
+			"scope":      "markup.italic",
+			"font_style": "italic"
+		},
+
+		{
+			"name":       "Bold",
+			"scope":      "markup.bold",
+			"font_style": "bold"
+		},
+
+		// NeoVintageous
+		{
+			"scope":      "neovintageous_search_inc",
+			"background": "var(highlight_bg)",
+			"foreground": "var(highlight_fg)"
+		},
+
+		{
+			"scope":      "neovintageous_search_cur",
+			"background": "var(highlight_bg)",
+			"foreground": "var(highlight_fg)"
+		},
+
+		{
+			"scope":      "neovintageous_search_occ",
+			"background": "var(highlight_or)",
+			"foreground": "var(highlight_fg)"
+		},
+
+		{
+			"scope": "highlightedyank",
+			"background": "var(softer_bg)",
+			"foreground": "var(fg)"
+		}
+	]
+}
