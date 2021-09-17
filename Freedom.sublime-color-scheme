@@ -32,17 +32,20 @@
 		"fg":           "var(grey900)",
 		"soft_bg":      "var(grey300)",
 		"soft_fg":      "var(grey800)",
-		"softer_bg":    "var(grey200)",
-		"softer_fg":    "var(grey600)",
+		"softer_bg":    "var(grey100)",
+		"softer_fg":    "var(grey400)",
+
 		"select_bg":    "var(blue400)",
 		"select_fg":    "var(bg)",
 		"highlight_bg": "var(yellow500)",
 		"highlight_fg": "var(fg)",
 		"highlight_or": "var(yellow600)",
+
 		"comment":      "var(green600)",
 		"constant":     "var(blue900)",
 		"constant_alt": "var(blue500)",
 		"alert":        "var(red600)",
+
 		"added":        "var(green200)",
 		"modified":     "var(blue200)",
 		"deleted":      "var(red200)"
@@ -56,10 +59,16 @@
 		"caret":                         "var(select_bg)",
 		"block_caret":                   "var(select_bg)",
 
+		"gutter":                        "var(softer_bg)",
+		"gutter_foreground":             "var(softer_fg)",
+		"gutter_foreground_highlight":   "var(soft_fg)",
 		"line_highlight":                "var(softer_bg)",
+
 		"rulers":                        "var(soft_bg)",
 		"invisibles":                    "var(soft_bg)",
 		"misspelling":                   "var(alert)",
+		"fold_marker":                   "var(highlight_or)",
+		"accent":                        "var(select_bg)",
 
 		"selection_border_width":        "0",
 		"selection_corner_radius":       "2",
@@ -89,63 +98,69 @@
 	[
 		// Code
 		{
-			"name":       "Comment",
 			"scope":      "comment, punctuation.definition.comment",
 			"foreground": "var(comment)"
 		},
 
 		{
-			"name":       "String",
 			"scope":      "string",
 			"foreground": "var(constant)"
 		},
 
 		{
-			"name":       "Escapes",
 			"scope":      "constant.character.escape, constant.other.placeholder",
 			"foreground": "var(constant_alt)"
 		},
 
 		{
-			"name":       "Constants",
 			"scope":      "constant",
 			"foreground": "var(constant)"
 		},
 
 		{
-			"name":       "Mistakes",
 			"scope":      "invalid",
 			"foreground": "var(alert)"
 		},
 
+		// Diffs
+		{
+			"scope":      "markup.inserted",
+			"foreground": "var(added)"
+		},
+
+		{
+			"scope":      "markup.changed",
+			"foreground": "var(modified)"
+		},
+
+		{
+			"scope":      "markup.deleted",
+			"foreground": "var(deleted)"
+		},
+
 		// Exclusions
 		{
-			"name":       "JSON",
 			"scope":      "string.quoted.double.json",
 			"foreground": "var(fg)"
 		},
 
 		// Markup
 		{
-			"name":       "Tags",
 			"scope":      "entity.name.tag, punctuation.definition.tag",
-			"foreground": "var(softer_fg)"
+			"foreground": "var(constant)"
 		},
 
 		{
-			"name":       "Headings",
 			"scope":      "markup.heading",
 			"font_style": "bold"
 		},
 
 		{
-			"name":       "Italic",
 			"scope":      "markup.italic",
 			"font_style": "italic"
 		},
 
 		{
-			"name":       "Bold",
 			"scope":      "markup.bold",
 			"font_style": "bold"
 		},

@@ -15,6 +15,7 @@
 		"bgrey700":  "#455a64",
 		"bgrey800":  "#37474f",
 		"bgrey900":  "#263238",
+		"bgrey000":  "#212b31",
 
 		"red600":    "#e53935",
 		"red900":    "#b71c1c",
@@ -34,15 +35,20 @@
 		"soft_fg":      "var(bgrey200)",
 		"softer_bg":    "var(bgrey800)",
 		"softer_fg":    "var(bgrey300)",
+		"hard_bg":      "var(bgrey000)",
+		"hard_fg":      "var(bgrey700)",
+
 		"select_bg":    "var(blue700)",
 		"select_fg":    "var(fg)",
 		"highlight_bg": "var(yellow800)",
 		"highlight_fg": "var(bg)",
 		"highlight_or": "var(yellow900)",
+
 		"comment":      "var(green300)",
 		"constant":     "var(blue100)",
 		"constant_alt": "var(blue400)",
 		"alert":        "var(yellow800)",
+
 		"added":        "var(green900)",
 		"modified":     "var(blue900)",
 		"deleted":      "var(red900)"
@@ -56,10 +62,16 @@
 		"caret":                         "var(select_bg)",
 		"block_caret":                   "var(select_bg)",
 
-		"line_highlight":                "var(softer_bg)",
+		"gutter":                        "var(hard_bg)",
+		"gutter_foreground":             "var(hard_fg)",
+		"gutter_foreground_highlight":   "var(soft_fg)",
+		"line_highlight":                "var(hard_bg)",
+
 		"rulers":                        "var(soft_bg)",
 		"invisibles":                    "var(soft_bg)",
 		"misspelling":                   "var(alert)",
+		"fold_marker":                   "var(alert)",
+		"accent":                        "var(soft_bg)",
 
 		"selection_border_width":        "0",
 		"selection_corner_radius":       "2",
@@ -89,63 +101,69 @@
 	[
 		// Code
 		{
-			"name":       "Comment",
 			"scope":      "comment, punctuation.definition.comment",
 			"foreground": "var(comment)"
 		},
 
 		{
-			"name":       "String",
 			"scope":      "string",
 			"foreground": "var(constant)"
 		},
 
 		{
-			"name":       "Escapes",
 			"scope":      "constant.character.escape, constant.other.placeholder",
 			"foreground": "var(constant_alt)"
 		},
 
 		{
-			"name":       "Constants",
 			"scope":      "constant",
 			"foreground": "var(constant)"
 		},
 
 		{
-			"name":       "Mistakes",
 			"scope":      "invalid",
 			"foreground": "var(alert)"
 		},
 
+		// Diffs
+		{
+			"scope":      "markup.inserted",
+			"foreground": "var(added)"
+		},
+
+		{
+			"scope":      "markup.changed",
+			"foreground": "var(modified)"
+		},
+
+		{
+			"scope":      "markup.deleted",
+			"foreground": "var(deleted)"
+		},
+
 		// Exclusions
 		{
-			"name":       "JSON",
 			"scope":      "string.quoted.double.json",
 			"foreground": "var(fg)"
 		},
 
 		// Markup
 		{
-			"name":       "Tags",
 			"scope":      "entity.name.tag, punctuation.definition.tag",
-			"foreground": "var(softer_fg)"
+			"foreground": "var(constant)"
 		},
 
 		{
-			"name":       "Headings",
 			"scope":      "markup.heading",
 			"font_style": "bold"
 		},
 
 		{
-			"name":       "Italic",
 			"scope":      "markup.italic",
 			"font_style": "italic"
 		},
 
 		{
-			"name":       "Bold",
 			"scope":      "markup.bold",
 			"font_style": "bold"
 		},
