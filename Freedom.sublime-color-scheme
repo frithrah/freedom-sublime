@@ -4,7 +4,7 @@
 
 	"variables":
 	{
-		// Colours
+		// Colours - Material Design system
 		"grey50":    "#fafafa",
 		"grey100":   "#f5f5f5",
 		"grey200":   "#eeeeee",
@@ -28,12 +28,14 @@
 		"yellow600": "#fdd835",
 
 		// Styles
-		"bg":           "var(grey50)",
+		"bg":           "var(grey100)",
 		"fg":           "var(grey900)",
-		"soft_bg":      "var(grey300)",
-		"soft_fg":      "var(grey800)",
-		"softer_bg":    "var(grey100)",
-		"softer_fg":    "var(grey400)",
+
+		"dimmed_fg":    "var(grey600)",
+		"soft_bg":      "var(grey200)",
+		"soft_fg":      "var(grey400)",
+		"hard_bg":      "var(grey300)",
+		"hard_fg":      "var(grey800)",
 
 		"select_bg":    "var(blue400)",
 		"select_fg":    "var(bg)",
@@ -59,13 +61,13 @@
 		"caret":                         "var(select_bg)",
 		"block_caret":                   "var(select_bg)",
 
-		"gutter":                        "var(softer_bg)",
-		"gutter_foreground":             "var(softer_fg)",
-		"gutter_foreground_highlight":   "var(soft_fg)",
-		"line_highlight":                "var(softer_bg)",
+		"gutter":                        "var(soft_bg)",
+		"gutter_foreground":             "var(soft_fg)",
+		"gutter_foreground_highlight":   "var(hard_fg)",
+		"line_highlight":                "var(soft_bg)",
 
-		"rulers":                        "var(soft_bg)",
-		"invisibles":                    "var(soft_bg)",
+		"rulers":                        "var(hard_bg)",
+		"invisibles":                    "var(hard_bg)",
 		"misspelling":                   "var(alert)",
 		"fold_marker":                   "var(highlight_or)",
 		"accent":                        "var(select_bg)",
@@ -74,7 +76,7 @@
 		"selection_corner_radius":       "2",
 		"selection":                     "var(select_bg)",
 		"selection_foreground":          "var(select_fg)",
-		"inactive_selection":            "var(soft_bg)",
+		"inactive_selection":            "var(hard_bg)",
 		"inactive_selection_foreground": "var(fg)",
 
 		"highlight":                     "var(select_bg)",
@@ -124,18 +126,32 @@
 
 		// Diffs
 		{
-			"scope":      "markup.inserted",
-			"foreground": "var(added)"
+			"scope":      "markup.inserted, diff.inserted, diff.inserted.char",
+			"background": "color(var(added) a(0.3))",
+			"foreground": "var(fg)"
 		},
 
 		{
 			"scope":      "markup.changed",
-			"foreground": "var(modified)"
+			"background": "color(var(modified) a(0.3))",
+			"foreground": "var(fg)"
 		},
 
 		{
 			"scope":      "markup.deleted",
-			"foreground": "var(deleted)"
+			"background": "color(var(deleted) a(0.3))",
+			"foreground": "var(dimmed_fg)"
+		},
+
+		{
+			"scope":      "diff.deleted",
+			"background": "color(var(deleted) a(0.3))",
+			"foreground": "var(fg)"
+		},
+		{
+			"scope":      "diff.deleted.char",
+			"background": "color(var(deleted) a(0.6))",
+			"foreground": "var(dimmed_fg)"
 		},
 
 		// Exclusions
@@ -147,7 +163,7 @@
 		// Markup
 		{
 			"scope":      "entity.name.tag, punctuation.definition.tag",
-			"foreground": "var(constant)"
+			"foreground": "var(dimmed_fg)"
 		},
 
 		{
@@ -186,8 +202,8 @@
 
 		{
 			"scope": "highlightedyank",
-			"background": "var(soft_bg)",
-			"foreground": "var(fg)"
+			"background": "var(hard_bg)",
+			"foreground": "var(hard_fg)"
 		}
 	]
 }

@@ -4,7 +4,7 @@
 
 	"variables":
 	{
-		// Colours
+		// Colours - Material Design system
 		"bgrey50":   "#eceff1",
 		"bgrey100":  "#cfd8dc",
 		"bgrey200":  "#b0bec5",
@@ -15,7 +15,7 @@
 		"bgrey700":  "#455a64",
 		"bgrey800":  "#37474f",
 		"bgrey900":  "#263238",
-		"bgrey000":  "#212b31",
+		"bgrey920":  "#212b31",
 
 		"red600":    "#e53935",
 		"red900":    "#b71c1c",
@@ -31,12 +31,12 @@
 		// Styles
 		"bg":           "var(bgrey900)",
 		"fg":           "var(bgrey50)",
-		"soft_bg":      "var(bgrey700)",
-		"soft_fg":      "var(bgrey200)",
-		"softer_bg":    "var(bgrey800)",
-		"softer_fg":    "var(bgrey300)",
-		"hard_bg":      "var(bgrey000)",
-		"hard_fg":      "var(bgrey700)",
+
+		"dimmed_fg":    "var(bgrey300)",
+		"soft_bg":      "var(bgrey920)",
+		"soft_fg":      "var(bgrey700)",
+		"hard_bg":      "var(bgrey700)",
+		"hard_fg":      "var(bgrey200)",
 
 		"select_bg":    "var(blue700)",
 		"select_fg":    "var(fg)",
@@ -62,22 +62,22 @@
 		"caret":                         "var(select_bg)",
 		"block_caret":                   "var(select_bg)",
 
-		"gutter":                        "var(hard_bg)",
-		"gutter_foreground":             "var(hard_fg)",
-		"gutter_foreground_highlight":   "var(soft_fg)",
-		"line_highlight":                "var(hard_bg)",
+		"gutter":                        "var(soft_bg)",
+		"gutter_foreground":             "var(soft_fg)",
+		"gutter_foreground_highlight":   "var(hard_fg)",
+		"line_highlight":                "var(soft_bg)",
 
-		"rulers":                        "var(soft_bg)",
-		"invisibles":                    "var(soft_bg)",
+		"rulers":                        "var(hard_bg)",
+		"invisibles":                    "var(hard_bg)",
 		"misspelling":                   "var(alert)",
 		"fold_marker":                   "var(alert)",
-		"accent":                        "var(soft_bg)",
+		"accent":                        "var(hard_bg)",
 
 		"selection_border_width":        "0",
 		"selection_corner_radius":       "2",
 		"selection":                     "var(select_bg)",
 		"selection_foreground":          "var(select_fg)",
-		"inactive_selection":            "var(soft_bg)",
+		"inactive_selection":            "var(hard_bg)",
 		"inactive_selection_foreground": "var(fg)",
 
 		"highlight":                     "var(highlight_bg)",
@@ -127,18 +127,32 @@
 
 		// Diffs
 		{
-			"scope":      "markup.inserted",
-			"foreground": "var(added)"
+			"scope":      "markup.inserted, diff.inserted, diff.inserted.char",
+			"background": "color(var(added) a(0.3))",
+			"foreground": "var(fg)"
 		},
 
 		{
 			"scope":      "markup.changed",
-			"foreground": "var(modified)"
+			"background": "color(var(modified) a(0.3))",
+			"foreground": "var(fg)"
 		},
 
 		{
 			"scope":      "markup.deleted",
-			"foreground": "var(deleted)"
+			"background": "color(var(deleted) a(0.3))",
+			"foreground": "var(dimmed_fg)"
+		},
+
+		{
+			"scope":      "diff.deleted",
+			"background": "color(var(deleted) a(0.3))",
+			"foreground": "var(fg)"
+		},
+		{
+			"scope":      "diff.deleted.char",
+			"background": "color(var(deleted) a(0.6))",
+			"foreground": "var(dimmed_fg)"
 		},
 
 		// Exclusions
@@ -150,7 +164,7 @@
 		// Markup
 		{
 			"scope":      "entity.name.tag, punctuation.definition.tag",
-			"foreground": "var(constant)"
+			"foreground": "var(dimmed_fg)"
 		},
 
 		{
@@ -189,8 +203,8 @@
 
 		{
 			"scope": "highlightedyank",
-			"background": "var(softer_bg)",
-			"foreground": "var(fg)"
+			"background": "var(hard_bg)",
+			"foreground": "var(hard_fg)"
 		}
 	]
 }
