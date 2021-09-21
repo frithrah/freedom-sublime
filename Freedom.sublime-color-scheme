@@ -28,11 +28,11 @@
 		"yellow600": "#fdd835",
 
 		// Styles
-		"bg":           "var(grey100)",
+		"bg":           "var(grey50)",
 		"fg":           "var(grey900)",
 
 		"dimmed_fg":    "var(grey600)",
-		"soft_bg":      "var(grey200)",
+		"soft_bg":      "var(grey100)",
 		"soft_fg":      "var(grey400)",
 		"hard_bg":      "var(grey300)",
 		"hard_fg":      "var(grey800)",
