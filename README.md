@@ -7,6 +7,7 @@ A restrained colour scheme for Sublime Text. Based on the Material Design colour
 * Colour schemes that are gentle on the eye whilst still providing contrast
 * Comments stand out
 * Strings, escape codes and constants are subtly defined to highlight errors
+* Diffs and build output also considered
 
 Dark and light variants.
 

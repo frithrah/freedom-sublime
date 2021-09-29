@@ -17,7 +17,7 @@
 		"grey900":   "#212121",
 
 		"red200":    "#ef9a9a",
-		"red600":    "#e53935",
+		"red800":    "#c62828",
 		"green200":  "#a5d6a7",
 		"green600":  "#43a047",
 		"blue200":   "#90caf9",
@@ -46,11 +46,14 @@
 		"comment":      "var(green600)",
 		"constant":     "var(blue900)",
 		"constant_alt": "var(blue500)",
-		"alert":        "var(red600)",
+		"alert":        "var(red800)",
 
 		"added":        "var(green200)",
 		"modified":     "var(blue200)",
-		"deleted":      "var(red200)"
+		"deleted":      "var(red200)",
+
+		"warning":      "var(blue900)",
+		"error":        "var(alert)",
 	},
 
 	"globals":
@@ -69,7 +72,7 @@
 		"rulers":                        "var(hard_bg)",
 		"invisibles":                    "var(hard_bg)",
 		"misspelling":                   "var(alert)",
-		"fold_marker":                   "var(highlight_or)",
+		"fold_marker":                   "var(select_bg)",
 		"accent":                        "var(select_bg)",
 
 		"selection_border_width":        "0",
@@ -154,12 +157,6 @@
 			"foreground": "var(dimmed_fg)"
 		},
 
-		// Exclusions
-		{
-			"scope":      "string.quoted.double.json",
-			"foreground": "var(fg)"
-		},
-
 		// Markup
 		{
 			"scope":      "entity.name.tag, punctuation.definition.tag",
@@ -179,6 +176,28 @@
 		{
 			"scope":      "markup.bold",
 			"font_style": "bold"
+		},
+
+		// Build Output
+		{
+			"scope":      "markup.info",
+			"foreground": "var(fg)"
+		},
+
+		{
+			"scope":      "markup.warning",
+			"foreground": "var(warning)"
+		},
+
+		{
+			"scope":      "markup.error",
+			"foreground": "var(error)"
+		},
+
+		// Syntax-specific
+		{
+			"scope":      "string.quoted.double.json",
+			"foreground": "var(fg)"
 		},
 
 		// NeoVintageous

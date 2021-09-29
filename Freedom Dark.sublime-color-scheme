@@ -51,7 +51,10 @@
 
 		"added":        "var(green900)",
 		"modified":     "var(blue900)",
-		"deleted":      "var(red900)"
+		"deleted":      "var(red900)",
+
+		"warning":      "var(blue100)",
+		"error":        "var(alert)",
 	},
 
 	"globals":
@@ -155,12 +158,6 @@
 			"foreground": "var(dimmed_fg)"
 		},
 
-		// Exclusions
-		{
-			"scope":      "string.quoted.double.json",
-			"foreground": "var(fg)"
-		},
-
 		// Markup
 		{
 			"scope":      "entity.name.tag, punctuation.definition.tag",
@@ -180,6 +177,28 @@
 		{
 			"scope":      "markup.bold",
 			"font_style": "bold"
+		},
+
+		// Build Output
+		{
+			"scope":      "markup.info",
+			"foreground": "var(fg)"
+		},
+
+		{
+			"scope":      "markup.warning",
+			"foreground": "var(warning)"
+		},
+
+		{
+			"scope":      "markup.error",
+			"foreground": "var(error)"
+		},
+
+		// Syntax-specific
+		{
+			"scope":      "string.quoted.double.json",
+			"foreground": "var(fg)"
 		},
 
 		// NeoVintageous
