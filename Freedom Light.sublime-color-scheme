@@ -22,7 +22,6 @@
 		"green600":  "#43a047",
 		"blue200":   "#90caf9",
 		"blue400":   "#42a5f5",
-		"blue500":   "#2196f3",
 		"blue900":   "#0d47a1",
 		"yellow500": "#ffeb3b",
 		"yellow600": "#fdd835",
@@ -45,7 +44,7 @@
 
 		"comment":      "var(green600)",
 		"constant":     "var(blue900)",
-		"constant_alt": "var(blue500)",
+		"constant_alt": "var(grey600)",
 		"alert":        "var(red800)",
 
 		"added":        "var(green200)",
@@ -69,6 +68,7 @@
 		"gutter_foreground_highlight":   "var(hard_fg)",
 		"line_highlight":                "var(soft_bg)",
 
+		"guide":                         "var(hard_bg)",
 		"rulers":                        "var(hard_bg)",
 		"invisibles":                    "var(hard_bg)",
 		"misspelling":                   "var(alert)",
