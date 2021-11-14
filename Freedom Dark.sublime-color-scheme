@@ -105,7 +105,8 @@
 		// Code
 		{
 			"scope":      "comment, punctuation.definition.comment",
-			"foreground": "var(comment)"
+			"foreground": "var(comment)",
+			"font_style": "italic"
 		},
 
 		{
@@ -126,6 +127,11 @@
 		{
 			"scope":      "invalid",
 			"foreground": "var(alert)"
+		},
+
+		{
+			"scope":      "entity.name.function",
+			"font_style": "bold"
 		},
 
 		// Diffs
