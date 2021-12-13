@@ -22,6 +22,7 @@
 		"green600":  "#43a047",
 		"blue200":   "#90caf9",
 		"blue400":   "#42a5f5",
+		"blue600":   "#1e88e5",
 		"blue900":   "#0d47a1",
 		"yellow500": "#ffeb3b",
 		"yellow600": "#fdd835",
@@ -35,6 +36,7 @@
 		"soft_fg":      "var(grey400)",
 		"hard_bg":      "var(grey300)",
 		"hard_fg":      "var(grey800)",
+		"accent":	"var(blue600)",
 
 		"select_bg":    "var(blue400)",
 		"select_fg":    "var(bg)",
@@ -66,14 +68,14 @@
 		"gutter":                        "var(soft_bg)",
 		"gutter_foreground":             "var(soft_fg)",
 		"gutter_foreground_highlight":   "var(hard_fg)",
-		"line_highlight":                "var(soft_bg)",
+		"line_highlight":                "var(hard_bg)",
 
 		"guide":                         "var(hard_bg)",
 		"rulers":                        "var(hard_bg)",
 		"invisibles":                    "var(hard_bg)",
 		"misspelling":                   "var(alert)",
 		"fold_marker":                   "var(select_bg)",
-		"accent":                        "var(select_bg)",
+		"accent":                        "var(accent)",
 
 		"selection_border_width":        "0",
 		"selection_corner_radius":       "2",
