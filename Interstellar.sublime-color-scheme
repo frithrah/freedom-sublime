@@ -7,7 +7,7 @@
 		"void":   "#010207",
 		"silver": "#a9b0b4",
 		"opal":   "#0f3b57",
-		"gold":   "#eb5406",
+		"gold":   "#a17917",
 		"cool":   "#4984b8",
 		"sea":    "#2b2e43",
 		"inter":  "#001155",
@@ -15,34 +15,35 @@
 		"blood":  "#770001",
 
 		// Styles
-		"bg":           "var(void)",
-		"fg":           "var(silver)",
+		"bg":            "var(void)",
+		"fg":            "var(silver)",
 
-		"alt_bg":       "color(var(bg) l(+ 8%))",
-		"alt_fg":       "color(var(fg) l(- 20%))",
-		"dim_bg":       "color(var(bg) l(- 2%))",
-		"dim_fg":       "var(sea)",
-		"accent":	"var(blood)",
+		"alt_bg":        "color(var(bg) l(+ 8%))",
+		"alt_fg":        "color(var(fg) l(- 20%))",
+		"dim_bg":        "color(var(bg) l(- 2%))",
+		"dim_fg":        "var(sea)",
+		"accent":        "var(blood)",
 
-		"select_bg":    "var(opal)",
-		"select_fg":    "var(fg)",
-		"highlight_bg": "var(gold)",
-		"highlight_fg": "var(bg)",
+		"select_bg":     "var(opal)",
+		"select_fg":     "var(fg)",
+		"highlight_bg":  "var(gold)",
+		"highlight_fg":  "var(bg)",
+		"highlight_alt": "color(var(gold) l(- 8%))",
 
-		"comment":      "color(var(fg) l(- 20%))",
-		"constant":     "color(var(fg) l(- 15%))",
-		"constant_alt": "color(var(fg) l(- 30%))",
+		"comment":       "color(var(fg) l(- 20%))",
+		"constant":      "color(var(fg) l(- 15%))",
+		"constant_alt":  "color(var(fg) l(- 30%))",
 
-		"added":        "var(pine)",
-		"added_bg":     "color(var(pine) l(- 6%))",
-		"modified":     "var(inter)",
-		"modified_bg":  "color(var(inter) l(- 10%))",
-		"deleted":      "var(blood)",
-		"deleted_bg":   "color(var(blood) l(- 19%))",
+		"added":         "var(pine)",
+		"added_bg":      "color(var(pine) l(- 6%))",
+		"modified":      "var(inter)",
+		"modified_bg":   "color(var(inter) l(- 10%))",
+		"deleted":       "var(blood)",
+		"deleted_bg":    "color(var(blood) l(- 19%))",
 
-		"warning":      "var(cool)",
-		"alert":        "var(gold)",
-		"error":        "var(gold)",
+		"warning":       "var(cool)",
+		"alert":         "var(gold)",
+		"error":         "var(gold)",
 	},
 
 	"globals":
@@ -211,7 +212,7 @@
 
 		{
 			"scope":      "neovintageous_search_occ",
-			"background": "var(highlight_bg)",
+			"background": "var(highlight_alt)",
 			"foreground": "var(highlight_fg)"
 		},
 

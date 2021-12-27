@@ -28,33 +28,33 @@
 		"amber700":  "#ffa000",
 
 		// Styles
-		"bg":           "var(brown100)",
-		"fg":           "var(brown900)",
+		"bg":            "var(brown100)",
+		"fg":            "var(brown900)",
 
-		"dimmed_fg":    "var(brown700)",
-		"soft_bg":      "var(brown140)",
-		"soft_fg":      "var(brown300)",
-		"hard_bg":      "var(brown200)",
-		"hard_fg":      "var(brown700)",
-		"accent":	"var(green700)",
+		"dimmed_fg":     "var(brown700)",
+		"soft_bg":       "var(brown140)",
+		"soft_fg":       "var(brown300)",
+		"hard_bg":       "var(brown200)",
+		"hard_fg":       "var(brown700)",
+		"accent":        "var(green700)",
 
-		"select_bg":    "var(blue300)",
-		"select_fg":    "var(brown50)",
-		"highlight_bg": "var(amber600)",
-		"highlight_fg": "var(fg)",
-		"highlight_or": "var(amber700)",
+		"select_bg":     "var(blue300)",
+		"select_fg":     "var(brown50)",
+		"highlight_bg":  "var(amber600)",
+		"highlight_fg":  "var(fg)",
+		"highlight_alt": "var(amber700)",
 
-		"comment":      "var(green700)",
-		"constant":     "var(blue900)",
-		"constant_alt": "var(blue600)",
-		"alert":        "var(red800)",
+		"comment":       "var(green700)",
+		"constant":      "var(blue900)",
+		"constant_alt":  "var(blue600)",
+		"alert":         "var(red800)",
 
-		"added":        "var(green300)",
-		"modified":     "var(blue300)",
-		"deleted":      "var(red300)",
+		"added":         "var(green300)",
+		"modified":      "var(blue300)",
+		"deleted":       "var(red300)",
 
-		"warning":      "var(blue900)",
-		"error":        "var(alert)",
+		"warning":       "var(blue900)",
+		"error":         "var(alert)",
 	},
 
 	"globals":
@@ -223,7 +223,7 @@
 
 		{
 			"scope":      "neovintageous_search_occ",
-			"background": "var(highlight_or)",
+			"background": "var(highlight_alt)",
 			"foreground": "var(highlight_fg)"
 		},
 
