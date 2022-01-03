@@ -92,6 +92,12 @@
 
 	"rules":
 	[
+		// Tools
+		{
+			"scope":      "entity.name.filename.find-in-files",
+			"font_style": "underline"
+		},
+
 		// Code
 		{
 			"scope":      "comment, punctuation.definition.comment",
